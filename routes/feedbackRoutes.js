@@ -43,7 +43,11 @@ router.post("/", async (req, res) => {
     await feedback.save();
     res.status(201).json({ message: "Feedback salvo com sucesso!" });
   } catch (error) {
-    res.status(400).json({ error: "Erro ao salvar feedback." });
+    console.error(error);     
+    res.status(400).json({ 
+      message: "Dados inválidos. Verifique os campos.",
+      errors: error.errors 
+    });
   }
 });
 
