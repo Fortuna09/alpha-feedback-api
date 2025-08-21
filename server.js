@@ -108,6 +108,10 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+app.get('/', (req, res) => {
+  res.send('API v1.2 - CORREÇÃO DE CORS IMPLANTADA');
+});
+
 const feedbackRoutes = require("./routes/feedbackRoutes");
 app.use("/api/feedbacks", feedbackRoutes);
 
