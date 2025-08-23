@@ -1,0 +1,22 @@
+# Alpha Feedback API
+
+### Descrição
+API RESTful que serve como backend para a aplicação Alpha Feedback. Gerencia a coleta de feedbacks de usuários e fornece endpoints seguros para que administradores possam visualizar e analisar os dados através de um dashboard.
+
+### Tecnologias Utilizadas
+* Node.js
+* MongoDB Atlas
+* JSON Web Tokens (JWT)
+
+### Instalação e Uso
+
+Siga os passos abaixo para executar a API em sua máquina local.
+
+**Pré-requisitos:**
+* Node.js (v18 ou superior)
+* Git
+
+**1. Clone o Repositório:**
+```bash
+git clone https://github.com/Fortuna09/alpha-feedback-api
+cd alpha-feedback-api
