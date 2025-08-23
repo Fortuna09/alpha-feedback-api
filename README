@@ -1,7 +1,7 @@
 # Alpha Feedback API
 
 ### Descrição
-API RESTful que serve como backend para a aplicação Alpha Feedback. Gerencia a coleta de feedbacks de usuários e fornece endpoints seguros para que administradores possam visualizar e analisar os dados através de um dashboard.
+API RESTful que serve como backend para a aplicação Alpha Desk (https://github.com/Fortuna09/alpha-feedback-angular). Gerencia a coleta de feedbacks de usuários e fornece endpoints seguros para que administradores possam visualizar e analisar os dados através de um dashboard.
 
 ### Tecnologias Utilizadas
 * Node.js
