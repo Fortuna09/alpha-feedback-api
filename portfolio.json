@@ -1,0 +1,7 @@
+{
+    "titulo": "Alpha Desk - Envio de feedback e análise de dados",
+    "objetivo": "Desenvolver uma aplicação full-stack para cadastro de usuários, composta por um formulário de alta performance, e gráficos para analisar as métricas no front-end e uma API RESTful para persistência segura dos dados.",
+    "desafio": "Construir uma arquitetura cliente-servidor robusta com validação de dados em duas camadas (front-end e back-end) e documentação completa da API com Swagger.",
+    "tecnologia": "Node.js, Mongoose, MongoDB, Swagger, JWT Authentication",
+    "tags": [ "TypeScript", "Node.js", "Full-Stack"]
+}
