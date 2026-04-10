@@ -1,7 +1,7 @@
 {
     "titulo": "Alpha Desk - API",
-    "objetivo": "Desenvolver uma API RESTful para gerenciamento de tarefas, incluindo autenticação de usuários, validação de dados e documentação da API, para o projeto Alpha Desk.",
-    "desafio": "Criar uma API robusta e escalável utilizando Node.js, Mongoose e MongoDB, implementando autenticação JWT e documentação com Swagger, garantindo a segurança e a eficiência no gerenciamento de tarefas.",
-    "tecnologia": "Node.js, Mongoose, MongoDB, Swagger, JWT Authentication",
-    "tags": [ "TypeScript", "Node.js", "Full-Stack"]
+    "objetivo": "API Segura e Documentada (Swagger) para sustentar um funil de feedbacks, garantindo persistência segura e validação rigorosa de dados.",
+    "desafio": "Criar uma arquitetura escalável utilizando Node.js e MongoDB, implementando autenticação segura via tokens JWT e entregando uma documentação interativa para clientes consumirem os endpoints.",
+    "tecnologia": "Node.js, Express, MongoDB, Mongoose, Swagger, JWT",
+    "tags": ["Node.js", "Express", "API REST", "Back-end"]
 }
