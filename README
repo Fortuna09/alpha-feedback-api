@@ -1,12 +1,25 @@
 # Alpha Feedback API
 
 ### Descrição
-API RESTful que serve como backend para a aplicação Alpha Desk (https://github.com/Fortuna09/alpha-feedback-angular). Gerencia a coleta de feedbacks de usuários e fornece endpoints seguros para que administradores possam visualizar e analisar os dados através de um dashboard.
+API RESTful que serve como backend para a aplicação Alpha Desk (https://github.com/Fortuna09/alpha-feedback-angular). Gerencia a coleta de feedbacks de usuários e fornece endpoints para que administradores autenticados possam visualizar e analisar os dados através de um dashboard.
 
 ### Tecnologias Utilizadas
-* Node.js
-* MongoDB Atlas
-* JSON Web Tokens (JWT)
+* Node.js + Express
+* MongoDB Atlas (via Mongoose)
+* JSON Web Tokens (JWT) + bcrypt para autenticação
+* Swagger (OpenAPI) para documentação da API
+
+### Endpoints
+
+| Método | Rota | Autenticação | Descrição |
+|---|---|---|---|
+| GET | `/` | — | Health check |
+| POST | `/api/auth/register` | — | Cria um novo usuário |
+| POST | `/api/auth/login` | — | Autentica e retorna um JWT (válido por 8h) |
+| POST | `/api/feedbacks` | — | Envia um novo feedback (formulário público) |
+| GET | `/api/feedbacks` | **Bearer token obrigatório** | Lista todos os feedbacks |
+
+Documentação interativa (Swagger UI) disponível em `/api-docs` quando o servidor está rodando.
 
 ### Instalação e Uso
 
@@ -15,8 +28,30 @@ Siga os passos abaixo para executar a API em sua máquina local.
 **Pré-requisitos:**
 * Node.js (v18 ou superior)
 * Git
+* Uma string de conexão do MongoDB (Atlas ou local)
 
 **1. Clone o Repositório:**
 ```bash
 git clone https://github.com/Fortuna09/alpha-feedback-api
 cd alpha-feedback-api
+```
+
+**2. Instale as dependências:**
+```bash
+npm install
+```
+
+**3. Crie um arquivo `.env` na raiz do projeto:**
+```bash
+MONGO_URI=sua_string_de_conexao_do_mongodb
+JWT_SECRET=seu_segredo_para_assinar_os_tokens
+FRONTEND_URL=http://localhost:4200
+PORT=5000
+```
+
+**4. Inicie o servidor:**
+```bash
+npm start
+```
+
+A API sobe em `http://localhost:5000` (ou na porta definida em `PORT`).
