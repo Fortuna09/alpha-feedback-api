@@ -101,6 +101,15 @@ const swaggerOptions = {
       description: "API para gerenciamento de feedbacks dos usuários",
     },
     servers: [{ url: "http://localhost:5000", description: "Servidor de Desenvolvimento" }],
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+        },
+      },
+    },
   },
   apis: ["./routes/*.js"], // Inclui todas as rotas na documentação
 };

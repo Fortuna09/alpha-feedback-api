@@ -1,5 +1,6 @@
 const express = require("express");
 const Feedback = require("../models/Feedback");
+const { requireAuth } = require("../middleware/auth");
 
 const router = express.Router();
 
@@ -56,9 +57,11 @@ router.post("/", async (req, res) => {
  * /api/feedbacks:
  *   get:
  *     summary: Lista todos os feedbacks
- *     description: Retorna um array com todos os feedbacks armazenados
+ *     description: Retorna um array com todos os feedbacks armazenados. Requer autenticação.
  *     tags:
  *       - Feedback
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Lista de feedbacks retornada com sucesso
@@ -90,8 +93,10 @@ router.post("/", async (req, res) => {
  *                   updatedAt:
  *                     type: string
  *                     format: date-time
+ *       401:
+ *         description: Token ausente, inválido ou expirado
  */
-router.get("/", async (req, res) => {
+router.get("/", requireAuth, async (req, res) => {
   try {
     const feedbacks = await Feedback.find();
     res.json(feedbacks);
